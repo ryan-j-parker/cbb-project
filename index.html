@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="/assets/alchemy-favicon.png" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/bulletin-board.css" />
+    <title>Community Bulletin Board</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="/assets/cbb-logo.png">
+        <h1>Community BB</h1>
+        <nav>
+            <a href="create-post">Add Post</a>
+            <a id="sign-out-link" href="auth">Sign Out</a>
+        </nav>
+    </header>
+
+    <main>
+        <ul id="bulletin-board">
+            <li class="post-it">
+                <h2>Kittens</h2><span class="category" title="free">🎁</span>
+                <p class="description">cute pics coming</p>
+                <p>meow</p>
+            </li>
+            <li class="post-it">
+                <h2>Room for Rent</h2><span class="category" title="housing">🏠</span>
+                <p class="description">Chill house vibe, all utilities included. $500/mo</p>
+                <p>text me at 503-555-1234</p>
+            </li>
+            <li class="post-it">
+                <h2>class demo</h2><span class="category" title="event">📅</span>
+                <p class="description">get yur code right here</p>
+                <p>zoom</p>
+            </li>
+        </ul>
+
+    </main>
+
+    <footer>&copy;2022 Software Developer</footer>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
