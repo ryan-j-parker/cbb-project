@@ -59,7 +59,6 @@ export function renderPostDetail(post) {
 
     const categoryEl = document.createElement('p');
     categoryEl.textContent = `${post.category.emoji}`;
-    console.log(post);
 
     const postTitle = document.createElement('h2');
     postTitle.textContent = `${post.title}`;
