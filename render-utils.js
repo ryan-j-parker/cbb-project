@@ -41,3 +41,41 @@ export function renderPosts(posts) {
 
     return fragment;
 }
+
+export function renderPostDetail(post) {
+
+    const postIt = document.createElement('div');
+    postIt.classList.add('post-detail-container');
+
+    const deletePost = document.createElement('button');
+    deletePost.classList.add('delete-post-btn');
+    deletePost.textContent = 'Delete post';
+
+    //const categoryEl = document.createElement('p');
+    //categoryEl.textContent = `${post.category}`;
+
+    const postTitle = document.createElement('h2');
+    postTitle.textContent = `${post.title}`;
+    postTitle.classList.add('post-title-detail');
+
+    const postDescription = document.createElement('p');
+    postDescription.classList.add('post-description-detail');
+    postDescription.textContent = `${post.description}`;
+
+    const contactEl = document.createElement('p');
+    contactEl.textContent = `${post.content}`;
+    contactEl.classList.add('contact-detail');
+
+    const commentSection = document.createElement('div');
+    const commentInput = document.createElement('input');
+    commentInput.classList.add('comment-input');
+    const postComment = document.createElement('button');
+    postComment.classList.add('post-comment');
+
+    postComment.textContent = 'Post comment';
+
+    commentSection.append(commentInput, postComment);
+    postIt.append(deletePost, postTitle, postDescription, contactEl, commentSection);
+
+    return postIt;
+}
