@@ -58,3 +58,7 @@ export async function getPostDetail(id) {
     const response = await client.from('posts').select('*, category: categories(*)').match({ id }).single();
     return checkError(response);
 }
+
+export async function deletePost(id) {
+    return await client.from('posts').delete().match({ id });
+}

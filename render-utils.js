@@ -48,29 +48,27 @@ export function renderPosts(posts) {
     return fragment;
 }
 
+
 export function renderPostDetail(post) {
 
     const postIt = document.createElement('div');
-    postIt.classList.add('post-detail-container');
-
-    const deletePost = document.createElement('button');
-    deletePost.classList.add('delete-post-btn');
-    deletePost.textContent = 'Delete post';
+    postIt.classList.add('post-it');
 
     const categoryEl = document.createElement('p');
+    categoryEl.classList.add('category');
     categoryEl.textContent = `${post.category.emoji}`;
 
     const postTitle = document.createElement('h2');
     postTitle.textContent = `${post.title}`;
-    postTitle.classList.add('post-title-detail');
+    postTitle.classList.add('title');
 
     const postDescription = document.createElement('p');
-    postDescription.classList.add('post-description-detail');
+    postDescription.classList.add('description');
     postDescription.textContent = `${post.description}`;
 
     const contactEl = document.createElement('p');
     contactEl.textContent = `${post.content}`;
-    contactEl.classList.add('contact-detail');
+    contactEl.classList.add('contact');
 
     const commentSection = document.createElement('div');
     const commentInput = document.createElement('input');
@@ -81,7 +79,8 @@ export function renderPostDetail(post) {
     postComment.textContent = 'Post comment';
 
     commentSection.append(commentInput, postComment);
-    postIt.append(deletePost, categoryEl, postTitle, postDescription, contactEl, commentSection);
+    postIt.append(categoryEl, postTitle, postDescription, contactEl, commentSection);
 
     return postIt;
 }
+
