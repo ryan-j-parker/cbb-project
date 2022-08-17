@@ -59,6 +59,7 @@ export async function getPostDetail(id) {
     return checkError(response);
 }
 
+// deletes post from supabase by post ID
 export async function deletePost(id) {
     return await client.from('posts').delete().match({ id });
 }

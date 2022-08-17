@@ -1,7 +1,6 @@
 import { getPostDetail, checkAuth, deletePost } from '../fetch-utils.js';
 import { renderPostDetail } from '../render-utils.js';
 
-
 const postItDetail = document.getElementById('post-it-detail');
 const params = new URLSearchParams(window.location.search);
 
@@ -21,6 +20,7 @@ async function displayPost() {
 
 displayPost();
 
+// this is what renders the detail page if the user trying to access the post's detail page is the same user that created the post
 function authPostDetail(post) {
 
     const postIt = document.createElement('div');
