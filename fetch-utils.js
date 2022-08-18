@@ -63,3 +63,21 @@ export async function getPostDetail(id) {
 export async function deletePost(id) {
     return await client.from('posts').delete().match({ id });
 }
+
+export async function getProfiles() {
+    // const response = await client.from('profiles').select('*');
+    // return checkError(response);
+    return await client.from('profiles').select('*');
+}
+
+export async function getProfile(id) {
+    // const response = await client.from('profiles').match({ id });
+    // return checkError(response);
+    return await client.from('profiles').select('*').match({ id }).single();
+}
+
+export async function saveProfile(profile) {
+    // const response = await client.from('profiles').upsert(profile).single();
+    // return checkError(response);
+    return await client.from('profiles').upsert(profile).single();
+}

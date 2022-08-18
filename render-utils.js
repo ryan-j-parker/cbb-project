@@ -83,4 +83,3 @@ export function renderPostDetail(post) {
 
     return postIt;
 }
-

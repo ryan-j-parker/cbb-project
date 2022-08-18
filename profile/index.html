@@ -28,33 +28,16 @@
     </header>
 
     <main>
-        <form id="post-it-form">
-            <label>
-                <div>Category</div>
-                <select id="category-select" name="category_id" required>
-                    <option disabled selected value="">choose a category...</option>
-                </select>
-            </label>
-
-            <label>
-                <div>Title</div>
-                <input name="title" required placeholder="my post is about...">
-            </label>
-
-            <label>
-                <div>Description</div>
-                <textarea name="description" required placeholder="more details..."></textarea>
-            </label>
-
-            <label>
-                <div>Contact</div>
-                <input name="contact" placeholder="how to get in touch..." />
-            </label>
-
-            <button>Add Post</button>
-
+        <div id="form-container">
+        <form id="profile-form">
+            <label for="profile-name">Name</label>
+            <input type="text" name="profile-name">
+            <label for="profile-bio">Bio</label>
+                <textarea name="profile-bio" id="" cols="30" rows="10"></textarea>
+                <button name="profile-btn">Update profile</button>
             <p class="error"></p>
         </form>
+        </div>
     </main>
 
     <footer>&copy;2022 Software Developer</footer>
