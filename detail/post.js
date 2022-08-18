@@ -50,16 +50,7 @@ function authPostDetail(post) {
     contactEl.textContent = `${post.contact}`;
     contactEl.classList.add('contact');
 
-    // const commentSection = document.createElement('div');
-    // const commentInput = document.createElement('input');
-    // commentInput.classList.add('comment-input');
-    // const postComment = document.createElement('button');
-    // postComment.classList.add('post-comment');
-
-    // postComment.textContent = 'Post comment';
-
-    // commentSection.append(commentInput, postComment);
-    postIt.append(deleteBtn, categoryEl, postTitle, postDescription, contactEl/*, commentSection*/);
+    postIt.append(deleteBtn, categoryEl, postTitle, postDescription, contactEl);
 
     return postIt;
 }

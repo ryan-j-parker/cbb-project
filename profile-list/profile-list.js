@@ -8,7 +8,6 @@ async function displayProfiles() {
     for (let user of users) {
         profilesList.append(renderProfile(user));
     }
-    
 }
 
 displayProfiles();

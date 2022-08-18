@@ -1,12 +1,10 @@
 import { getProfile, saveProfile, checkAuth } from '../fetch-utils.js';
 
 const profileForm = document.getElementById('profile-form');
-const profileNameInput = profileForm.querySelector('[profile-name]');
+const profileNameInput = profileForm.querySelector('[name=profile-name]');
 const profileBioInput = profileForm.querySelector('[name=profile-bio]');
 const errorDisplay = profileForm.querySelector('.error');
 const user = checkAuth();
-
-console.log(user);
 
 profileForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -19,8 +17,6 @@ profileForm.addEventListener('submit', async (e) => {
         bio: data.get('profile-bio'),
     });
 
-    // const profileName = data.get('profile-name');
-    // const profileBio = data.get('profile-bio');
     const error = response.error;
 
     if (error) {

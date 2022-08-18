@@ -48,7 +48,6 @@ export function renderPosts(posts) {
     return fragment;
 }
 
-
 export function renderPostDetail(post) {
 
     const postIt = document.createElement('div');
@@ -70,16 +69,7 @@ export function renderPostDetail(post) {
     contactEl.textContent = `${post.contact}`;
     contactEl.classList.add('contact');
 
-    // const commentSection = document.createElement('div');
-    // const commentInput = document.createElement('input');
-    // commentInput.classList.add('comment-input');
-    // const postComment = document.createElement('button');
-    // postComment.classList.add('post-comment');
-
-    // postComment.textContent = 'Post comment';
-
-    // commentSection.append(commentInput, postComment);
-    postIt.append(categoryEl, postTitle, postDescription, contactEl/*, commentSection*/);
+    postIt.append(categoryEl, postTitle, postDescription, contactEl);
 
     return postIt;
 }
