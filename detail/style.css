@@ -1,4 +1,4 @@
-#bulletin-board {
+#post-it-detail {
     height: 100%;
     background-image: url(../assets/bulletin-bg.jpeg);
     border: 10px solid black;
@@ -50,23 +50,6 @@
     font-size: 1.5em;
 }
 
-.post-it a {
-    display: grid;
-    gap: 0.5em;
-    height: 100%;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-a:hover {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-a:active {
-    text-decoration: none;
+.delete {
     cursor: pointer;
 }

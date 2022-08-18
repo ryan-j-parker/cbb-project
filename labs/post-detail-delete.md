@@ -10,8 +10,8 @@ Note that the comments feature will be added later this week to this page
 
 Sketch out what the page will look like. On your diagram, identify:
 
--   What are the pieces of data required? (down to the field/column level)
--   What actions take place on the page? (usually means DOM events + page load)
+- What are the pieces of data required? (down to the field/column level)
+- What actions take place on the page? (usually means DOM events + page load)
 
 Take a screen shot and include in your repo
 
@@ -64,9 +64,9 @@ Create and export new function from `fetch-utils.js` that deletes a post (by pos
 
 The following is required for your assignment to be graded:
 
--   PR open from `post-detail-delete` to `dev`
--   PR Passes CI (lint)
--   PR preview on netlify
+- PR open from `post-detail-delete` to `dev`
+- PR Passes CI (lint)
+- PR preview on netlify
 
 | Commit with...                        |  20 |
 | :------------------------------------ | --: |

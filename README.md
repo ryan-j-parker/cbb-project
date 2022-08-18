@@ -27,3 +27,5 @@ If you work on more than one feature at a time, you are guaranteed to multiply y
     1. From "sql editor", new script and run starter schema `db/schema.sql`
     1. From "sql editor", new script and run starter category data `db/categories.sql`
     1. From "settings > api", copy URL and Key into `fetch-utils.js`
+
+// 

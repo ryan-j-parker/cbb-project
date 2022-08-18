@@ -16,6 +16,10 @@ export function renderPosts(posts) {
     const fragment = document.createDocumentFragment();
 
     for (const post of posts) {
+
+        const a = document.createElement('a');
+        a.href = `../detail/?id=${post.id}`;
+
         const li = document.createElement('li');
         li.classList.add('post-it');
 
@@ -36,8 +40,47 @@ export function renderPosts(posts) {
 
         li.append(titleEl, categoryEl, descriptionEl, contactEl);
 
-        fragment.append(li);
+        a.append(li);
+        fragment.append(a);
+    
     }
 
     return fragment;
 }
+
+
+export function renderPostDetail(post) {
+
+    const postIt = document.createElement('div');
+    postIt.classList.add('post-it');
+
+    const categoryEl = document.createElement('p');
+    categoryEl.classList.add('category');
+    categoryEl.textContent = `${post.category.emoji}`;
+
+    const postTitle = document.createElement('h2');
+    postTitle.textContent = `${post.title}`;
+    postTitle.classList.add('title');
+
+    const postDescription = document.createElement('p');
+    postDescription.classList.add('description');
+    postDescription.textContent = `${post.description}`;
+
+    const contactEl = document.createElement('p');
+    contactEl.textContent = `${post.content}`;
+    contactEl.classList.add('contact');
+
+    const commentSection = document.createElement('div');
+    const commentInput = document.createElement('input');
+    commentInput.classList.add('comment-input');
+    const postComment = document.createElement('button');
+    postComment.classList.add('post-comment');
+
+    postComment.textContent = 'Post comment';
+
+    commentSection.append(commentInput, postComment);
+    postIt.append(categoryEl, postTitle, postDescription, contactEl, commentSection);
+
+    return postIt;
+}
+
