@@ -65,9 +65,9 @@ export async function deletePost(id) {
 }
 
 export async function getProfiles() {
-    // const response = await client.from('profiles').select('*');
-    // return checkError(response);
-    return await client.from('profiles').select('*');
+    const response = await client.from('profiles').select('*');
+    return checkError(response);
+    // return await client.from('profiles').select('*');
 }
 
 export async function getProfile(id) {

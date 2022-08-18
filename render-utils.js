@@ -42,7 +42,7 @@ export function renderPosts(posts) {
 
         a.append(li);
         fragment.append(a);
-    
+
     }
 
     return fragment;
@@ -67,19 +67,35 @@ export function renderPostDetail(post) {
     postDescription.textContent = `${post.description}`;
 
     const contactEl = document.createElement('p');
-    contactEl.textContent = `${post.content}`;
+    contactEl.textContent = `${post.contact}`;
     contactEl.classList.add('contact');
 
-    const commentSection = document.createElement('div');
-    const commentInput = document.createElement('input');
-    commentInput.classList.add('comment-input');
-    const postComment = document.createElement('button');
-    postComment.classList.add('post-comment');
+    // const commentSection = document.createElement('div');
+    // const commentInput = document.createElement('input');
+    // commentInput.classList.add('comment-input');
+    // const postComment = document.createElement('button');
+    // postComment.classList.add('post-comment');
 
-    postComment.textContent = 'Post comment';
+    // postComment.textContent = 'Post comment';
 
-    commentSection.append(commentInput, postComment);
-    postIt.append(categoryEl, postTitle, postDescription, contactEl, commentSection);
+    // commentSection.append(commentInput, postComment);
+    postIt.append(categoryEl, postTitle, postDescription, contactEl/*, commentSection*/);
 
     return postIt;
+}
+
+export function renderProfile(profile) {
+    const div = document.createElement('div');
+    div.classList.add('profile');
+
+    const nameEl = document.createElement('h2');
+    nameEl.textContent = `${profile.name}`;
+    nameEl.classList.add('name');
+
+    const bioEl = document.createElement('p');
+    bioEl.textContent = `${profile.bio}`;
+    bioEl.classList.add('bio');
+
+    div.append(nameEl, bioEl);
+    return div;
 }
