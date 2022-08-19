@@ -52,4 +52,9 @@
 
 .delete {
     cursor: pointer;
+    width: 80px;
+}
+
+.delete:active {
+    transform: scale(.95);
 }
