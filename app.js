@@ -34,10 +34,9 @@ displayPosts();
 
 
 const categoryDropdown = document.getElementById('category-dropdown');
-const categoryDisplay = document.getElementById('category-display');
 
 categoryDropdown.addEventListener('change', async () => {
-        displayFilteredPosts(categoryDropdown.value);
+    displayFilteredPosts(categoryDropdown.value);
 });
 
 displayPosts();
@@ -50,9 +49,7 @@ async function displayFilteredPosts(value) {
     const filteredArray = await getPostsByCategory(value);
     const filteredPosts = renderPosts(filteredArray);
     filteredArray.length === 0 ? bulletinBoard.append(pTag) : bulletinBoard.append(filteredPosts);
-    console.log('filteredPosts', filteredPosts);
-    // bulletinBoard.append(filteredPosts);
-    console.log('filteredArray', filteredArray);
+
 }
 
 /*
