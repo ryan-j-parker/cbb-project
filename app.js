@@ -78,7 +78,7 @@ back to index.html
 */
 
 function renderCatsOnTheFly() {
-    
+
     const catDiv = document.createElement('div');
     const catOne = document.createElement('button');
     catOne.textContent = 'For sale';
@@ -115,28 +115,28 @@ function renderCatsOnTheFly() {
         bulletinBoard.textContent = '';
         const freePosts = await getPostsByCategory(2);
         const freeP = renderPosts(freePosts);
-        freePosts.length === 0 ? bulletinBoard.append('No posts match your request') : bulletinBoard.append(freeP);
+        freePosts.length === 0 ? bulletinBoard.append(noMatch) : bulletinBoard.append(freeP);
     });
 
     catThree.addEventListener('click', async () => {
         bulletinBoard.textContent = '';
         const eventPosts = await getPostsByCategory(3);
         const eventP = renderPosts(eventPosts);
-        eventPosts.length === 0 ? bulletinBoard.append('No posts match your request') : bulletinBoard.append(eventP);
+        eventPosts.length === 0 ? bulletinBoard.append(noMatch) : bulletinBoard.append(eventP);
     });
 
     catFour.addEventListener('click', async () => {
         bulletinBoard.textContent = '';
         const housingPosts = await getPostsByCategory(4);
         const housingP = renderPosts(housingPosts);
-        housingPosts.length === 0 ? bulletinBoard.append('No posts match your request') : bulletinBoard.append(housingP);
+        housingPosts.length === 0 ? bulletinBoard.append(noMatch) : bulletinBoard.append(housingP);
     });
 
     catFive.addEventListener('click', async () => {
         bulletinBoard.textContent = '';
         const miscPosts = await getPostsByCategory(5);
         const miscP = renderPosts(miscPosts);
-        miscPosts.length === 0 ? bulletinBoard.append('No posts match your request') : bulletinBoard.append(miscP);
+        miscPosts.length === 0 ? bulletinBoard.append(noMatch) : bulletinBoard.append(miscP);
     });
 
     catDiv.classList.add('cat-div');
