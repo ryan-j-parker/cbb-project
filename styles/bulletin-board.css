@@ -20,7 +20,7 @@
 }
 
 .cat-div {
-    display: contents;
+    display: flex;
     background-color: orangered;
     padding: 5px;
     margin: auto;

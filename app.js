@@ -22,6 +22,13 @@ async function displayPosts() {
 
 displayPosts();
 
+
+// async function displayAllCats() {
+//     const showAllCats = await getPosts();
+//     const allCats = renderPosts(showAllCats);
+//     bulletinBoard.append(allCats);
+// }
+
 // const categoryDropdown = document.getElementById('category-dropdown');
 
 // categoryDropdown.addEventListener('change', async () => {
@@ -32,11 +39,22 @@ displayPosts();
 // const catPost = getPostsByCategory(5);
 // console.log(catPost);
 
+// function selectAllCats() {
+//     const options = document.getElementsByTagName('option');
+//     for (let i = 0; i < options.length; i++) {
+//         options[i].selected = true;
+//     }
+// }
+
 
 const categoryDropdown = document.getElementById('category-dropdown');
 
 categoryDropdown.addEventListener('change', async () => {
     displayFilteredPosts(categoryDropdown.value);
+    if (categoryDropdown.value === 0) {
+        // bulletinBoard.textContent = displayAllCats();
+        // selectAllCats();
+    }
 });
 
 displayPosts();
