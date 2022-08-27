@@ -1,4 +1,4 @@
-#bulletin-board {
+#post-it-detail {
     height: 100%;
     background-image: url(../assets/bulletin-bg.jpeg);
     border: 10px solid black;
@@ -13,55 +13,6 @@
     gap: 1em;
 
     overflow-y: scroll;
-}
-
-.dropdown {
-    align-items: flex-start;
-}
-
-.cat-div {
-    display: flex;
-    background-color: orangered;
-    padding: 5px;
-    margin: auto;
-}
-
-.cat-btn {
-    display: flex;
-    font: inherit;
-    font-weight: 600;
-    height: auto;
-    width: auto;
-    padding: 10px;
-    background-color: green;
-    margin: 5px;
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}   
-
-.cat-btn:hover {
-    cursor: pointer;
-}
-
-.cat-btn:active {
-    transform: scale(.98);
-}
-
-#category-dropdown {
-    font-size: 2rem;
-    color: grey;
-    display: flex;
-    margin: 10px;
-}
-
-.no-match {
-    font-size: 2rem;
-    color: black;
-    font-weight: 600;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .post-it {
@@ -99,23 +50,11 @@
     font-size: 1.5em;
 }
 
-.post-it a {
-    display: grid;
-    gap: 0.5em;
-    height: 100%;
+.delete {
+    cursor: pointer;
+    width: 80px;
 }
 
-a {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-a:hover {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-a:active {
-    text-decoration: none;
-    cursor: pointer;
+.delete:active {
+    transform: scale(.95);
 }

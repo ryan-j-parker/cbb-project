@@ -13,53 +13,30 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/bulletin-board.css" />
-    <title>Add Post</title>
+    <link rel="stylesheet" href="../profile/style.css" />
+    <title>User profiles</title>
 </head>
 
 <body>
     <header>
         <img class="logo" src="/assets/cbb-logo.png">
-        <h1>Create a Post</h1>
+        <h1>User profiles</h1>
         <nav>
             <a href="../">Bulletin</a>
+            <a href="../profile/index.html">Update profile</a>
             <a id="sign-out-link" href="../auth">Sign out</a>
         </nav>
     </header>
 
     <main>
-        <form id="post-it-form">
-            <label>
-                <div>Category</div>
-                <select id="category-select" name="category_id" required>
-                    <option disabled selected value="">choose a category...</option>
-                </select>
-            </label>
-
-            <label>
-                <div>Title</div>
-                <input name="title" required placeholder="my post is about...">
-            </label>
-
-            <label>
-                <div>Description</div>
-                <textarea name="description" required placeholder="more details..."></textarea>
-            </label>
-
-            <label>
-                <div>Contact</div>
-                <input name="contact" placeholder="how to get in touch..." />
-            </label>
-
-            <button>Add Post</button>
-
-            <p class="error"></p>
-        </form>
+        <div id="profiles-list">
+            
+        </div>
     </main>
 
     <footer>&copy;2022 Software Developer</footer>
 
-    <script type="module" src="create-post.js"></script>
+    <script type="module" src="../profile-list/profile-list.js"></script>
 </body>
 
 </html>

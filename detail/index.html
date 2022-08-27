@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/detail/style.css">
     <link rel="stylesheet" href="/styles/bulletin-board.css" />
     <title>Community Bulletin Board</title>
 </head>
@@ -23,35 +24,20 @@
         <h1>Community BB</h1>
         <nav>
             <a href="create-post">Add Post</a>
-            <a href="./profile/index.html">Profile</a>
-            <a href="./profile-list/index.html">Users</a>
-            <a id="sign-out-link" href="auth">Sign Out</a>
+            <a id="sign-out-link" href="../auth">Sign Out</a>
         </nav>
     </header>
 
     <main>
-        <div id="dropdown">
-            <select id="category-dropdown" class="dropdown">
-                <option id="0" value="selectAllCats()">All categories</option>
-                <option id="1" value="1">💰 For sale</option>
-                <option id="3" value="3">📅 Events</option>
-                <option id="4" value="4">🏠 Housing</option>
-                <option id="5" value="5">❓ Misc</option>
-                <option id="2" value="2">🎁 Free</option>
-            </select>
-        </div>
-        <div id="category-display">
-
-        </div>
-        <ul id="bulletin-board">
+        <div id="post-it-detail">
             
-        </ul>
+        </div>
 
     </main>
 
     <footer>&copy;2022 Software Developer</footer>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="../detail/post.js"></script>
 </body>
 
 </html>
