@@ -19,7 +19,7 @@
 
 <body>
     <header>
-        <img class="logo" src="/assets/cbb-logo.png">
+        <img class="logo" src="/assets/cbb-logo.png" alt="">
         <h1>Community BB</h1>
         <nav>
             <a href="create-post">Add Post</a>
@@ -31,20 +31,22 @@
 
     <main>
         <div id="dropdown">
-            <select id="category-dropdown" class="dropdown">
-                <option id="0" value="selectAllCats()">All categories</option>
-                <option id="1" value="1">💰 For sale</option>
-                <option id="3" value="3">📅 Events</option>
-                <option id="4" value="4">🏠 Housing</option>
-                <option id="5" value="5">❓ Misc</option>
-                <option id="2" value="2">🎁 Free</option>
-            </select>
+            <label for="category-dropdown">
+                <select name="dropdown" id="category-dropdown" class="dropdown" aria-label="category-dropdown">
+                    <option value="all"">All categories</option>
+                    <option id=" 1" value="1">💰 For sale</option>
+                    <option id="3" value="3">📅 Events</option>
+                    <option id="4" value="4">🏠 Housing</option>
+                    <option id="5" value="5">❓ Misc</option>
+                    <option id="2" value="2">🎁 Free</option>
+                </select>
+            </label>
         </div>
-        <div id="category-display">
+        <!-- <div id="category-display">
 
-        </div>
+        </div> -->
         <ul id="bulletin-board">
-            
+
         </ul>
 
     </main>

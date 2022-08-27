@@ -63,6 +63,10 @@ nav {
     gap: 10px;
 }
 
+a {
+    font-size: 1.2rem;
+}
+
 nav a {
     color: var(--text-color);
 }
