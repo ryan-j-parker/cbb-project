@@ -81,3 +81,8 @@ export async function saveProfile(profile) {
     // return checkError(response);
     return await client.from('profiles').upsert(profile).single();
 }
+
+export async function getPostsByCategory(category_id) {
+    const response = await client.from('posts').select('*, category: categories(*)').match({ category_id });
+    return checkError(response);
+}

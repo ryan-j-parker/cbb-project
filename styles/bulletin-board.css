@@ -15,6 +15,55 @@
     overflow-y: scroll;
 }
 
+.dropdown {
+    align-items: flex-start;
+}
+
+.cat-div {
+    display: flex;
+    background-color: orangered;
+    padding: 5px;
+    margin: auto;
+}
+
+.cat-btn {
+    display: flex;
+    font: inherit;
+    font-weight: 600;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    background-color: green;
+    margin: 5px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}   
+
+.cat-btn:hover {
+    cursor: pointer;
+}
+
+.cat-btn:active {
+    transform: scale(.98);
+}
+
+#category-dropdown {
+    font-size: 2rem;
+    color: grey;
+    display: flex;
+    margin: 10px;
+}
+
+.no-match {
+    font-size: 2rem;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .post-it {
     height: 12em;
     width: 13em;
