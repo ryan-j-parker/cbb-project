@@ -38,7 +38,7 @@
     display: inline-flex;
     flex-direction: row;
     justify-content: space-evenly;
-}   
+}
 
 .cat-btn:hover {
     cursor: pointer;
@@ -48,11 +48,27 @@
     transform: scale(.98);
 }
 
+/* #dropdown {
+    width: 40%;
+    margin: auto;
+} */
+
+#dropdown {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 #category-dropdown {
     font-size: 2rem;
-    color: grey;
-    display: flex;
-    margin: 10px;
+    background-color: rgb(255, 255, 204);
+    padding: 5px;
+    margin: auto;
+    margin-bottom: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden;
 }
 
 .no-match {
@@ -62,6 +78,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#post-it-form {
+    background: url('../assets/yellow-notebook-paper.png') center;
+    object-fit: cover;
+    border: none;
+    border-radius: 20px;
+}
+
+input,
+textarea,
+#category-select {
+    border: none;
 }
 
 .post-it {
@@ -108,6 +137,7 @@
 a {
     text-decoration: none;
     cursor: pointer;
+    font-size: 1.2rem;
 }
 
 a:hover {
@@ -118,4 +148,26 @@ a:hover {
 a:active {
     text-decoration: none;
     cursor: pointer;
+}
+
+.form-label {
+    display: flex;
+    font-size: 1.2rem;
+    background-color: rgb(255, 247, 208);
+    border-radius: 5px;
+    margin-left: 0 auto;
+    width: 110px;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden;
+}
+
+.form-btn {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 15px;
 }

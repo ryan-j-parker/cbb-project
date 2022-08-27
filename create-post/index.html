@@ -30,28 +30,28 @@
     <main>
         <form id="post-it-form">
             <label>
-                <div>Category</div>
+                <div class="form-label">Category</div>
                 <select id="category-select" name="category_id" required>
                     <option disabled selected value="">choose a category...</option>
                 </select>
             </label>
 
             <label>
-                <div>Title</div>
+                <div class="form-label">Title</div>
                 <input name="title" required placeholder="my post is about...">
             </label>
 
             <label>
-                <div>Description</div>
+                <div class="form-label">Description</div>
                 <textarea name="description" required placeholder="more details..."></textarea>
             </label>
 
             <label>
-                <div>Contact</div>
+                <div class="form-label">Contact</div>
                 <input name="contact" placeholder="how to get in touch..." />
             </label>
 
-            <button>Add Post</button>
+            <button class="form-btn">Add Post</button>
 
             <p class="error"></p>
         </form>
